@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+article h2 {
+    font-size: 24px;
+    color: #333;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white
+} /* Lỗi: Thiếu dấu chấm phẩy sau "color: white" */
