@@ -1,0 +1,28 @@
+name: Check Project Structure
+
+on:
+  push:
+    branches:
+      - main  # Kiểm tra khi có code được push lên nhánh "main"
+  pull_request:
+    branches:
+      - main  # Kiểm tra khi có pull request vào nhánh "main"
+
+jobs:
+  check-structure:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run structure check
+        run: npm run check-structure
